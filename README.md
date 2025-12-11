@@ -3,9 +3,9 @@
 # vytvoření image na dockerhubu:
 ## ve wsl:
 ```
-cd /mnt/d/docker_simple_example
+cd /home/nohel/Docker_test
 
-docker build -t muj_image devcontainer/.
+docker build -t muj_image .
 ```
 
 ## otestovat interaktivne
@@ -15,10 +15,10 @@ docker run --rm -it --gpus all --name muj_kontejner -v ./example_data:/workspace
 python example_code.py example_data/data.txt 
 
 exit
-```
-> parametr -v pro namapování složek do kontejneru jede použít vícekrát
+
 
 ## pushnout 
+
 ```
 docker login -u tomasvicar
 docker tag muj_image tomasvicar/muj_image:latest
@@ -36,7 +36,7 @@ exit
 
 # nebo jedním rádkem
 ```
-docker run --rm  --gpus all --name muj_kontejner3 -v .:/workspace tomasvicar/muj_image:latest python example_code.py example_data/data.txt
+docker run --rm  --gpus all --name muj_stazeny -v ./Docker_test/example_data:/workspace/data nohelm/muj_image:latest python example_code.py data/data.txt
 ```
 > jen spustí kod a po doběhnutí zavře (narozdíl od přechozího co otevřelo terminal v dockeru)
 

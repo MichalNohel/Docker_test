@@ -29,5 +29,7 @@ with open(out_file, 'w') as f:
     f.write('This is the end of the test file.\n')
 
 
-# this is example how to call this  :
+
+
+# this is example how to call this  
 # python example_code.py input.txt
