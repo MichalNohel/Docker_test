@@ -40,3 +40,4 @@ docker run --rm  --gpus all --name muj_stazeny -v ./Docker_test/example_data:/wo
 ```
 > jen spustí kod a po doběhnutí zavře (narozdíl od přechozího co otevřelo terminal v dockeru)
 
+docker run --rm  --gpus all --name muj_stazeny -v ./tmp_data:/workspace/data nohelm/muj_image:latest python example_code.py data/data.txt
